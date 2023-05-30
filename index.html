@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae</title>
+
+    <H1 style="text-align: center;"><ins>CURRICULUM VITAE</ins></H1>
+    <br>
+    <br>
+
+
+    <section id="app">
+        <img :src="image" alt="imagen" align="right">
+
+        <h1>Nombre: {{nombre}}</h1>
+        <h1>Apellidos: {{apellido}}</h1>
+        <h2>Direción: {{dirección}}</h2>
+        <h2>Teléfono: {{teléfono}}</h2>
+        <h2>E-mail: {{correo}}</h2>
+        <br>
+        <br>
+        <hr />
+<h1><ins>Experiencia profesional:</ins></h1>
+
+<h3>2005-2012:</h3>
+<p>Me desempeñé como profesor universitario de la carrera de Pedagogía en Lengua Castellana de la Universidad del Sur, dictando las cátedras de <br>
+    Latín, Morfosintaxis de la Lengua Española, Introducción a la Literatura Latinoamericana, Pensamiento Crítico. En Pedagogía en Inglés dicté los cursos de <br>
+    English Literature I y II, en Fonoaudiología dicté las cátedras de Semántica, Fonética y Fonología. En Pedagogía en Arte dicté la cátedra de Estética.
+</p>
+
+<h3>2012-2020:</h3>
+<p> Me desempeñé como elaborador de contenido de la plataforma educativa ”Minerva”, donde aprendí a manejar herramientas tecnológicas<br> y programas para editar CSS,
+     como Dreamweaver. Luego me desempeñé como Content Manager de la plataforma de matemáticas “Neptuno”,<br> donde comencé a interiorizarme con el mundo del código y los algoritmos. 
+    </p>
+    
+        <h1><ins>Programas</ins></h1>
+        <ul>
+            <li>{{programas[0]}}</li>
+            <li>{{programas[1]}}</li>
+            <li>{{programas[2]}}</li>
+            <li>{{programas[3]}}</li>
+        </ul>
+        <hr />
+    </section>
+
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data: {
+                nombre: "Nader",
+                apellido: "Abusleme Cabezas",
+                dirección: "Diagonal Paraguay 406, Santiago Centro",
+                teléfono: "+56 9 8966 1229",
+                image: "assets/images/A-12970104-1683849710-7751.png",
+                correo: "naderabusleme@gmail.com",
+                programas: [
+                    "Ableton Live",
+                    "Visual Studio Code",
+                    "Jira",
+                    "Kanban"
+                ],
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
